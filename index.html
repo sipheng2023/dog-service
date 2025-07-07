@@ -110,19 +110,31 @@
 
 
 
-                grooming: "ຕັດຂົນ",
+                grooming: "ຕັດຂົນໝາ",
                 groomingSubtitle: "ລາຍລະອຽດ ຕັດຂົນ ແລະ ຕົກແຕ່ງ",
-                groomingDesc1: "ຕັດຂົນ ແລະ ຕົກແຕ່ງຂົນໝາ ",
+                groominglist: "ຕັດຂົນ ແລະ ຕົກແຕ່ງຂົນໝາ ",
                 groomingDesc: "ລາຄາ",
-                groomingDesc2: ". ລາຄາ ໝານ້ອຍ=100,000 ກີບ ແລະ ໝາໃຫຍ່= 200,000 ກີບ",
+                groominglist1: ". ລາຄາ ໝານ້ອຍ=100,000 ກີບ ແລະ ໝາໃຫຍ່= 200,000 ກີບ",
 
                   shower: "ອາບນ້ຳໝາ",
+                  showerlist: "ອາບນ້ຳໝາ",
+                  showerlist2:" ຈະໃຊ້ອາບດ້ວຍສະບູໝາ",
+                  showerlist3:"ຈະໃຊ້ຄີມນວດຕໍ່",
+                  showerlist4:"ສຸດທ້າຍເປົ່າຂົນໃຫ້ແຫ້ງ",
+
+                  showerlist1: "ລາຄາ 100,000 ກີບ ຕໍ່ 1 ຊົ່ວໂມງ",
+                  // showerDesc2: "ຈະໃຊ້ອາບດ້ວຍສະບູໝາ",
 
                   swimming: "ລອຍນ້ຳໝາ",
+                  swimminglist:" ລອຍນ້ຳໝາ ແລະ ຊັ້ນດ້ານໃນ",
+                   swimminglist1:"ລາຄາ 100,000 ກີບ ຕໍ່ 1 ຊົ່ວໂມງ",
 
-                  takecare : "ດູແລໝາ",
+                  takecare : "ຮັບຝາກໝາ",
+                  takecarelist:"ບໍລິການນີ້ສຳຫຼັບເຈົ້າຂອງບໍ່ຢູ່, ເຮົາຈະເບິ່ງແຍງຖ້າ",
+                  takecarelist2:"ຕອນຮັບຝາກແມ່ນຈະມີດັ່ງນີ້: ອາບນ້ຳທິດລະເທື່ອ, ເກືອເຂົ້າ 2 ຄາບຕໍ່",
+                  takecarelist1:"ລາຄາ 200 ໂດລາຕໍ່ເດືອນ",
 
-                  training: "ຝຶກສອນ",
+                  training: "ຝຶກໝາ",
 
                   transportation: "ຂົນສົ່ງ",
 
@@ -154,20 +166,55 @@
            //  const serviceSubTitles = document.querySelectorAll('section#services h2');
              document.querySelector('section#services h2').textContent = translations[lang].serviceSubTitles;
             const serviceDescs = document.querySelectorAll('section#services p');
-            const serviceList = document.querySelectorAll('section#services ul li');
-            const serviceList2 = document.querySelectorAll('section#services ul ol');
+            // Grooming Modal
+            document.querySelector('#groomingModal ul li').textContent = translations[lang].groominglist || "- We take the groomed dog.";
+            document.querySelector('#groomingModal ul ol').textContent = translations[lang].groominglist1 || "100,000 Kip for puppies and 200,000 Kip for adult dogs";
+
+            // Shower Modal
+            document.querySelector('#showerModal ul li').textContent = translations[lang].showerlist || "We will take a dog shower.";
+            document.querySelector('#showerModal ul li:nth-child(2)').textContent = translations[lang].showerlist2 || "First, take a dog shampoo.";
+            document.querySelector('#showerModal ul li:nth-child(3)').textContent = translations[lang].showerlist3 || "After, take a dog conditioner.";
+            document.querySelector('#showerModal ul li:nth-child(4)').textContent = translations[lang].showerlist4 || "Last, take Blow Dog's fur.";
+            document.querySelector('#showerModal ul ol').textContent = translations[lang].showerlist1 || "100,000 Kip for puppies and 200,000 Kip for adult dogs";
+
+            // Swimming Modal
+            document.querySelector('#swimmingModal ul li').textContent = translations[lang].swimminglist || "- We take the groomed dog.";
+            document.querySelector('#swimmingModal ul ol').textContent = translations[lang].swimminglist1 || "100,000 Kip for puppies and 200,000 Kip for adult dogs";
+
+            // take care 
+
+           document.querySelector('#takecareModal ul li').textContent = translations[lang].takecarelist || "The service is taking care of your dog while the owner is in another county.  ";
+           document.querySelector('#takecareModal  ul li:nth-child(2)').textContent = translations[lang].takecarelist2 || "Include showering once a week, feeding twice a day, and playing on the ground. ";
+          document.querySelector('#takecareModal ul ol').textContent = translations[lang].takecarelist1 || "100,000 Kip for puppies and 200,000 Kip for adult dogs";
+
+          // trainingModal
+          document.querySelector('#trainingModal ul li').textContent = lang === 'la'
+            ? "ເຝິກຕາມຈຸດປະສົງຂອງເຈົ້າຂອງໝາຍາກໃຫ້ເຝິກ"
+            : "We will train your dog for the purpose of ownership";
+          document.querySelector('#trainingModal ul ol').textContent = lang === 'la'
+            ? "ລາຄາ 400 ໂດລາຕໍ່ເດືອນ"
+            : "It costs $400 per month.";
+
+// transportationModal
+document.querySelector('#transportationModal ul li').textContent = lang === 'la'
+  ? "ພວກເຮົາສາມາດໄປຮັບ ແລະ ສົ່ງໝາໃຫ້ເມື່ອເຈົ້າຂອງບໍ່ສະດວກ"
+  : "We can pick up and drop off your dog when the owner is unavailable.";
+document.querySelector('#transportationModal ul ol').textContent = lang === 'la' 
+? "ຄ່າບໍລະການແມ່ນ ...... "
+: "100,000 Kip for puppies and 200,000 Kip for adult dogs";
+         
 
             serviceTitles[0].textContent = translations[lang].grooming;
             // serviceSubTitles[0].textContent = translations[lang].groomingSubtitle;
             // document.querySelector('text-2xl font-bold mb-4 h2').textContent = translations[lang].serviceSubTitles;
-            serviceDescs[0].textContent = translations[lang].groomingDesc;
-            serviceList[0].textContent = translations[lang].groomingDesc1;
-            serviceList2[0].textContent = translations[lang].groomingDesc2;
+    
 
             serviceTitles[1].textContent = translations[lang].shower;
+                      
+            // serviceList1[1].textContent = translations[lang].showerDesc1;
 
             serviceTitles[2].textContent = translations[lang].swimming;
-
+            
             serviceTitles[3].textContent = translations[lang].takecare;
 
             serviceTitles[4].textContent = translations[lang].training;
@@ -186,6 +233,7 @@
             document.querySelector('form input[type="email"]').placeholder = translations[lang].email;
             document.querySelector('form textarea').placeholder = translations[lang].help;
             document.querySelector('form button').textContent = translations[lang].send;
+
         }
 
         document.getElementById('lang-en').addEventListener('click', () => setLanguage('en'));
@@ -216,6 +264,7 @@
         <button type="button" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition" data-toggle="modal" data-target="#groomingModal">
           More Details
         </button>
+       
       </div>
       <!-- Grooming Modal -->
   
@@ -256,19 +305,13 @@
           <img src="img/Shower.jpg" alt="Dog Grooming" class="w-16 mx-auto mb-4">
           <ul class="mb-4 text-left list-disc list-inside">
             <li>We will take a dog shower. </li>
-            <li>ອາບນ້ຳໃຫ້ໝາ </li>
             <li>First, take a dog shampoo. </li>
-            <li>ຈະໃຊ້ອາບດ້ວຍສະບູໝາ</li>
             <li>After, take a dog conditioner.  </li>
-            <li>ຈະໃຊ້ຄີມນວດຕໍ່</li>
             <li>Last, take Blow Dog's fur. </li>
-            <li>ສຸດທ້າຍເປົ່າຂົນໃຫ້ແຫ້ງ</li>
-
           </ul>
           <p class="mb-2">Pricing:</p>
           <ul class="mb-4 text-left list-disc list-inside">
             <ol>100,000 Kip for puppies  and 200,000 Kip for adult dogs </ol>
-            <ol>ລາຄາ ໝານ້ອຍ=100,000 ກີບ ແລະ ໝາໃຫຍ່= 200,000 ກີບ</ol>
           </ul>
           <button class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition" onclick="document.getElementById('showerModal').classList.add('hidden')">Close</button>
         </div>
@@ -322,7 +365,8 @@
           <h2 class="text-2xl font-bold mb-4">Dog takecare Details</h2>
           <img src="img/taking-care.jpg" alt="Dog Grooming" class="w-16 mx-auto mb-4">
           <ul class="mb-4 text-left list-disc list-inside">
-            <li>-	We take the takecareModal dog. </li>
+            <li>The service is taking care of your dog while the owner is in another county. </li>
+            <li>Include showering once a week, feeding twice a day, and playing on the ground. </li>
           </ul>
           <p class="mb-2">Pricing:</p>
           <ul class="mb-4 text-left list-disc list-inside">
@@ -351,11 +395,11 @@
           <h2 class="text-2xl font-bold mb-4">Dog training Details</h2>
           <img src="img/training.jpg" alt="Dog Grooming" class="w-16 mx-auto mb-4">
           <ul class="mb-4 text-left list-disc list-inside">
-            <li>-	We take the groomed dog. </li>
+            <li>We will train your dog for the purpose of ownership</li>
           </ul>
           <p class="mb-2">Pricing:</p>
           <ul class="mb-4 text-left list-disc list-inside">
-            <ol>100,000 Kip for puppies  and 200,000 Kip for adult dogs </ol>
+            <ol>It costs $400 per month.  </ol>
           </ul>
           <button class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition" onclick="document.getElementById('trainingModal').classList.add('hidden')">Close</button>
         </div>
@@ -380,7 +424,7 @@
           <h2 class="text-2xl font-bold mb-4">Dog transportation  Details</h2>
           <img src="img/transportation service.jpg" alt="Dog Grooming" class="w-16 mx-auto mb-4">
           <ul class="mb-4 text-left list-disc list-inside">
-            <li>-	We take the transportation  dog. </li>
+            <li>We can pick up and drop off your dog when the owner is unavailable.  </li>
           </ul>
           <p class="mb-2">Pricing:</p>
           <ul class="mb-4 text-left list-disc list-inside">
