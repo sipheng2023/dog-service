@@ -64,8 +64,8 @@
             en: {
                 services: "Services",
                 contact: "Contact",
-                welcome: "Welcome to Paws & Care",
-                subtitle: "Your trusted partner in grooming, boarding, and loving your pets.",
+                welcome: "Inthaninh Dog Training Security",
+                subtitle: "The center you can trust with dog experts with over 17 years of experience",
                 explore: "Explore Services",
                 ourServices: "Our Services",
                 
@@ -90,7 +90,7 @@
 
 
 
-                testimonials: "What Our Clients Say",
+                testimonials: "Inthaninh Dog Training Security",
                 testimonialText: "\"Paws & Care took amazing care of our pup while we were on vacation. The staff is loving and professional!\"",
                 testimonialAuthor: "– Sarah M.",
                 getInTouch: "Get in Touch",
@@ -102,9 +102,9 @@
             la: {
                 services: "ບໍລິການ",
                 contact: "ຕິດຕໍ່",
-                welcome: "ຍິນດີຕ້ອນຮັບ Paws & Care",
-                subtitle: " ສູນບໍລິການທີ່ທ່ານໄວ້ວາງໃຈໄດ້ ແລະ ມີມາດຕະຖານ ຕ້ອງທີ່ນີ້ເທົ່ານັ້ນ",
-                explore: "ดูบริการ",
+                welcome: "Inthaninh Dog Training Security",
+                subtitle: "ສູນເຝິກແອບສັດທີ່ທ່ານໄວ້ໃຈໄດ້ເພາະມີຜູ້ຊ່ຽວຊານດ້ານໝາທີ່ມີປະສົບການມາກວ່າ 17 ປີ",
+                explore: "ການບໍລິການ",
                 ourServices: "ບໍລິການຂອງເຮົາ",
 
 
@@ -146,7 +146,7 @@
                 testimonials: "ຄໍາເຫັນຂອງລູກຄ້າ",
                 testimonialText: "\"Paws & Care ดูแลน้องหมาของเราอย่างดีมากในช่วงที่เราไปเที่ยว พนักงานน่ารักและเป็นมืออาชีพ!\"",
                 testimonialAuthor: "– Sarah M.",
-                getInTouch: "ติดต่อเรา",
+                getInTouch: "ຕິດຕໍ່ພວກເຮົາ",
                 name: "ชื่อของคุณ",
                 email: "อีเมลของคุณ",
                 help: "เราสามารถช่วยอะไรคุณได้บ้าง?",
@@ -203,6 +203,13 @@ document.querySelector('#transportationModal ul ol').textContent = lang === 'la'
 ? "ຄ່າບໍລະການແມ່ນ ...... "
 : "100,000 Kip for puppies and 200,000 Kip for adult dogs";
          
+// location
+
+document.querySelector('section#location h2').textContent = lang === 'la' ? "ສະຖານທີ່ຕັ້ງຂອງພວກເຮົາ" : "Our Location";
+document.querySelector('section#location h3').textContent = lang === 'la' ? "ຂໍ້ມູນຕິດຕໍ່" : "Contact Details";
+document.querySelector('section#location .location-details p strong').textContent = lang === 'la' ? "ທີ່ຢູ່:" : "Address:";
+document.querySelector('section#location .location-details p:nth-of-type(2) strong').textContent = lang === 'la' ? "ໂທລະສັບ:" : "Phone:";
+document.querySelector('section#location .location-details p:nth-of-type(3) strong').textContent = lang === 'la' ? "ອີເມວ:" : "Email:";
 
             serviceTitles[0].textContent = translations[lang].grooming;
             // serviceSubTitles[0].textContent = translations[lang].groomingSubtitle;
@@ -223,7 +230,9 @@ document.querySelector('#transportationModal ul ol').textContent = lang === 'la'
      
  
       
-    
+    // contact section
+
+            document.querySelector('section#contact h2').textContent = translations[lang].getInTouch;
 
             document.querySelector('section.bg-gray-50 h2').textContent = translations[lang].testimonials;
             document.querySelector('section.bg-gray-50 p.text-lg').textContent = translations[lang].testimonialText;
@@ -242,8 +251,8 @@ document.querySelector('#transportationModal ul ol').textContent = lang === 'la'
 
   <!-- Hero Section -->
   <section class="bg-blue-100 py-16 px-6 text-center">
-    <h1 class="text-4xl font-bold mb-4">Welcome to Paws & Care</h1>
-    <p class="text-lg mb-6">Your trusted partner in grooming, boarding, and loving your pets.</p>
+    <h1 class="text-4xl font-bold mb-4">Inthaninh Dog Training Security</h1>
+    <p class="text-lg mb-6">The center you can trust with dog experts with over 17 years of experience</p>
     <a href="#services" class="bg-blue-500 text-white px-6 py-2 rounded-full hover:bg-blue-600 transition">Explore Services</a>
   </section>
 
@@ -457,36 +466,49 @@ document.querySelector('#transportationModal ul ol').textContent = lang === 'la'
       <button type="submit" class="bg-blue-500 text-white px-6 py-3 rounded-lg hover:bg-blue-600 transition">Send Message</button>
     </form>
   </section>
-
+<!-- location -->
 <section id="location">
-  <b><h2>Our Location</h2></b>
-  <div class="map-container">
-    <div style="display: flex; justify-content: center;">
-     <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3794.353070170414!2d102.53997857517936!3d18.00881088298823!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTjCsDAwJzMxLjciTiAxMDLCsDMyJzMzLjIiRQ!5e0!3m2!1sen!2sla!4v1751251230107!5m2!1sen!2sla" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-    </div>
  
-    </div>
-  
-</section>
+    <h2 class="text-3xl font-bold text-center mb-8">Our Location</h2>
 
-  <!-- Footer -->
-  <footer class="bg-gray-100 text-center py-6">
-    <p class="mb-2">
-      <span class="font-semibold">Phone:</span>
-      <a href="tel:+856 20 97431506" class="text-blue-600 hover:underline ml-1">+856 20 97431506</a>
-      &nbsp;|&nbsp;
-      <span class="font-semibold">Email:</span>
-      <a href="mailto:phailinrunning@gmail.com" class="text-blue-600 hover:underline ml-1">phailinrunning@gmail.com</a>
-    &nbsp;|&nbsp;
-    <span class="font-semibold">Address:</span>
-    <span class="ml-1">Ban Nongniew Hom 07 , Sikhottabong district , Vientiane Capital, Laos</span>
-    </p>
-    <a href="https://www.facebook.com/profile.php?id=100095121986897" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center mb-2 text-blue-600 hover:text-blue-800">
+      <div class="location-details-map" style="display: flex; flex-wrap: wrap; gap: 2rem;">
+              <div class="location-details" style="flex: 1 1 250px; min-width: 220px;">
+                <br>
+                <h3>Contact Details</h3>
+                <p><strong>Address:</strong><br>
+                  Ban Nongniew Hom 07,Sikhottabong district<br>
+                  Vientiane Capital, Laos
+                </p>
+                <p><strong>Phone:</strong><br>
+                  <a href="tel:+856 20 97431506 ">+856 20 97431506</a>
+                </p>
+                <p><strong>Email:</strong><br>
+                  <a href="mailto:phailinrunning@gmail.com">phailinrunning@gmail.com</a>
+                </p>
+<br>
+<h2><strong>Follow us:</strong></h2>
+                    <a href="https://www.facebook.com/profile.php?id=100095121986897" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center mb-2 text-blue-600 hover:text-blue-800">
       <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 mr-1" fill="currentColor" viewBox="0 0 24 24">
         <path d="M22.675 0h-21.35C.595 0 0 .592 0 1.326v21.348C0 23.406.595 24 1.325 24h11.495v-9.294H9.692v-3.622h3.128V8.413c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.797.143v3.24l-1.918.001c-1.504 0-1.797.715-1.797 1.763v2.313h3.587l-.467 3.622h-3.12V24h6.116C23.406 24 24 23.406 24 22.674V1.326C24 .592 23.406 0 22.675 0"/>
       </svg>
       Facebook
     </a>
+              </div>
+              <div class="map-container" style="flex: 2 1 400px; min-width: 300px;">
+                <!-- Map iframe remains below -->
+            <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3794.353070170414!2d102.53997857517936!3d18.00881088298823!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTjCsDAwJzMxLjciTiAxMDLCsDMyJzMzLjIiRQ!5e0!3m2!1sen!2sla!4v1751251230107!5m2!1sen!2sla" width="800" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+              </div>
+      </div>
+    </div>
+
+
+  
+</section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-100 text-center py-6">
+ 
+
     <p>&copy; 2025 Paws & Care. All rights reserved.</p>
   </footer>
 
