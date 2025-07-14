@@ -207,7 +207,9 @@ document.querySelector('#transportationModal ul ol').textContent = lang === 'la'
 
 document.querySelector('section#location h2').textContent = lang === 'la' ? "ສະຖານທີ່ຕັ້ງຂອງພວກເຮົາ" : "Our Location";
 document.querySelector('section#location h3').textContent = lang === 'la' ? "ຂໍ້ມູນຕິດຕໍ່" : "Contact Details";
-document.querySelector('section#location .location-details p strong').textContent = lang === 'la' ? "ທີ່ຢູ່:" : "Address:";
+document.querySelector('section#location .location-details p strong').textContent = lang === 'la' ? "ທີ່ຢູ່: " : "Address:";
+document.querySelector('section#location .location-details span').textContent = lang === 'la' ? "ບ້ານ ໜອງໜ້ຽວ ຮ່ອມ 07,ເມືອງ ສີໂຄດຕະບອງ,ນະຄອນຫຼວງວຽງຈັນ" : "Ban Nongniew Hom 07 ,Sikhottabong district , Vientiane Capital, Laos";
+//document.querySelector('section#location .location-details p:nth-of-type(1) strong').textContent = lang === 'la' ? "ທີ່ຢູ່: ບ້ານຫຼວງ, ເມືອງ ວຽງຈັນ, ແຂວງ ວຽງຈັນ" : "Address: Ban Luang, Vientiane City, Vientiane Province";
 document.querySelector('section#location .location-details p:nth-of-type(2) strong').textContent = lang === 'la' ? "ໂທລະສັບ:" : "Phone:";
 document.querySelector('section#location .location-details p:nth-of-type(3) strong').textContent = lang === 'la' ? "ອີເມວ:" : "Email:";
 
@@ -476,8 +478,8 @@ document.querySelector('section#location .location-details p:nth-of-type(3) stro
                 <br>
                 <h3>Contact Details</h3>
                 <p><strong>Address:</strong><br>
-                  Ban Nongniew Hom 07,Sikhottabong district<br>
-                  Vientiane Capital, Laos
+                  <span>Ban Nongniew Hom 07,Sikhottabong district ,Vientiane Capital, Laos</span><br>
+                  
                 </p>
                 <p><strong>Phone:</strong><br>
                   <a href="tel:+856 20 97431506 ">+856 20 97431506</a>
